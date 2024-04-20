@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const posts = [
   { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
@@ -10,43 +9,72 @@ const version = 2 + 1
 </script>
 
 <template>
-  <div class="d-flex justify-content-around">
-    <a href="" class="navbar-bar"><h1>RetroBlog</h1></a>
-    <nav class="navbar d-flex flex-row justify-content-around">
-        <ul class="navbar-nav">
-          <li class="nav-item"><nuxt-link to="/" exact class="nav-link">Home</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
+  <div class="container">
+    <header>
+      <h1>Retro blog </h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <button type="button" class="btn btn-danger"><nuxt-link to="/" exact>Home</nuxt-link></button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
+          </li>
+          <!-- Add more navigation links here -->
         </ul>
       </nav>
-    </div>
-  <div class="container">
-    
-    <div class="blog">
-      <ul>
-        <li v-for="post in posts" :key="post.id" class="post">
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.content }}</p>
-          <nuxt-link :to="'/post/' + post.id" class="btn">Read More</nuxt-link>
-        </li>
-      </ul>
-    </div>
+    </header>
+
   </div>
+ <!-- the code for the card begings here -->
+<!-- first part ends here , -->
+<div class="card-container">
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+</div>
 </template>
 
 <style scoped>
 .container {
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 header {
   background-color: #333;
-  color: #fff;
+  color: #4d9c65;
   padding: 20px 0;
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .blog {
@@ -80,4 +108,31 @@ p {
 .btn:hover {
   background-color: #555;
 }
+
+/*  the code for the card styling begins here */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%; /* Set width to 30% to display three cards next to each other */
+  margin: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
 </style>
