@@ -1,33 +1,143 @@
-
 <script setup lang="ts">
+const posts = [
+  { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
+  { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
+  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
+];
 
 const version = 2 + 1
 </script>
 
 <template>
   <div class="container">
-  <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
-    <p>For more information visit website</p>
-    <b-button variant="primary" href="#">More Info</b-button>
-  </b-jumbotron>
-     
-<div>
-  <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-</div>
+    <header>
+      <h1>Retro blog </h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <button type="button" class="btn btn-danger"><nuxt-link to="/" exact>Home</nuxt-link></button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
+          </li>
+          <!-- Add more navigation links here -->
+        </ul>
+      </nav>
+    </header>
+
+  </div>
+ <!-- the code for the card begings here -->
+  
+<!-- first part ends here , -->
+<div class="card-container">
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
+  <cards></cards>
 </div>
 </template>
 
 <style scoped>
-.hello {
+.container {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3rem;
-  padding: 2rem;
+  width: 100%;
 }
+
+header {
+  background-color: #333;
+  color: #4d9c65;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.blog {
+  padding: 20px;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/*  the code for the card styling begins here */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%; /* Set width to 30% to display three cards next to each other */
+  margin: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.cardsname{
+  color: #4d9c65;
+    
+  }
+
+
 </style>
