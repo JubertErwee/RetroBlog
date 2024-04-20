@@ -1,25 +1,10 @@
 <script setup>
 import {ref} from 'vue';
 import Cards from '../components/Cards';
-const cardimages = ref([
-  { content: 'This is the content of the first post.' },
-  { content: 'This is the content of the second post.' },
-  { content: 'This is the content of the third post.' }
-]);
-
 const cardData = ref([
-  { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
-  { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' },
-  { id: 4, title: 'Fourth Post', content: 'This is the content of the fourth post.' },
-  { id: 5, title: 'Fifth Post', content: 'This is the content of the fifth post.' },
-  { id: 6, title: 'Sixth Post', content: 'This is the content of the sixth post.' },
-  { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
-  { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' },
-  { id: 4, title: 'Fourth Post', content: 'This is the content of the fourth post.' },
-  { id: 5, title: 'Fifth Post', content: 'This is the content of the fifth post.' },
-  { id: 6, title: 'Sixth Post', content: 'This is the content of the sixth post.' }
+  { id: 1, title: 'Doctor Strange', content: '"Doctor Strange in the Multiverse of Madness" explores the multiverse as Doctor Strange faces new threats and delves deeper into the mystical realms to confront dark forces.', image: '/img/blog3.jpg' },
+  { id: 2, title: 'Avengers: Endgame', content: '"Avengers: Endgame" follows Earth\'s mightiest heroes as they embark on a time-bending mission to reverse the devastating effects of Thanos\' snap and restore order to the universe.', image: '/img/blog-1.jpg' },
+  { id: 3, title: 'Black Panther', content: '"Black Panther" follows T\'Challa, the newly crowned king of Wakanda, as he grapples with his new role while confronting internal and external threats to his kingdom\'s peace and prosperity.', image: '/img/blog4.jpeg' }
 ]);
 
 const version = 2 + 1
@@ -27,16 +12,18 @@ const version = 2 + 1
 
 <template>
   <header>
-      <h1>Retro blog </h1>
+      <h1>RetroBlog</h1>
       <nav>
         <ul class="nav">
           <li class="nav-item">
-            <button type="button" class="btn btn-danger"><nuxt-link to="/index" exact>Home</nuxt-link></button>
+            <button type="button" class="btn btn-danger"><nuxt-link to="/" exact>Home</nuxt-link></button>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
           </li>
-          <!-- Add more navigation links here -->
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary"><nuxt-link to="/contact">Contact</nuxt-link></button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -49,8 +36,22 @@ const version = 2 + 1
   <Cards
   v-for="data in cardData"
   :key="data.id"
+  :image="data.image"
   :title="data.title"
   :content="data.content"></Cards>
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :image="data.image"
+  :title="data.title"
+  :content="data.content"></Cards>
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :image="data.image"
+  :title="data.title"
+  :content="data.content"></Cards>
+</div>
 </div>
 </template>
 

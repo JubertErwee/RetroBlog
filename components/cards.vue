@@ -1,47 +1,31 @@
 <script setup>
-defineProps(['title', 'content']);
+defineProps(['title', 'content', 'image']);
 </script>
 
 <template>
-
-<div class="cards-row">
     <div class="col-md-4 my-3 mx-auto">
       <div class="card p-4">
-      <img alt="Avatar" style="width:100%">
-      <div class="container">
+      <img :src="`${image}`" class="card-img-top">
+      <div class="card-body">
         <h4>{{ title }}</h4>
         <p>{{ content }}</p>
       </div>
       </div>
     </div>
-    <div class="card">
-    <img  src="..\components\assets\blog3.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4>{{ data[0].title }}</h4>
-      <p>{{ data[0].content}}</p>
-      <h4><b class="cardsname">Doctor Strange</b></h4>
-      <p class="pdiscript">Doctor Strange offers a visually stunning and mind-bending journey into the mystical realms, with impressive performances and inventive storytelling."r</p>
-    </div>
-  <div class="card">
-    <img src="..\components\assets\blog-1.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b class="cardsname">Avengers </b></h4>
-      <p class="pdiscript">Architect & Engineer</p>
-    </div>
-  <div class="card">
-    <img src="..\components\assets\blog4.jpeg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b class="pdiscript">Black Panther</b></h4>
-      <p>Architect & Engineer</p>
-    </div>
-</div>
+</template>
+
   <style scoped>
+  h4{
+    color: #4d9c65;
+  }
+
+  .card{
+    background: #eef1ee;
+  }
   .container {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
   }
-
-  <style scoped>
   
   p {
     font-size: 1.2rem;
