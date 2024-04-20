@@ -17,7 +17,7 @@
             <label for="message">Message</label>
             <textarea v-model="message" class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
           </div>
-          <button type="submit" id="btnSubmit" class="btn btn-primary btn-block">Submit</button>
+          <button type="submit" id="btnSubmit" class="btn btn-primary btn-block makebig">Submit</button>
         </form>
         <div v-if="showPopup" class="alert alert-danger mt-3" role="alert">
           Not all fields entered info!
@@ -71,9 +71,15 @@ export default {
   margin-bottom: 20px;
 }
 
-.form-group label {
-  text-align: left; 
-  display: block;
-  width: 100%;
-}
-</style>
+    .form-group label {
+      text-align: left; 
+      display: block;
+      width: 100%;
+    }
+
+    .makebig
+    {
+      margin: 20px;
+    }
+
+  </style>
