@@ -1,5 +1,16 @@
 <template>
 <div class="hello">
-    Hello Nuxt!
+   <!--
+
+             ,\
+             \\\,_
+              \` ,\
+         __,.-" =__)
+       ."        )
+    ,_/   ,    \/\_
+    \_|    )_-\ \_-`
+jgs    `-----` `--`
+
+   --> Hello Nuxt!
   </div>
 </template>

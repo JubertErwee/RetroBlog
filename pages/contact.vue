@@ -17,7 +17,7 @@
             <label for="message">Message</label>
             <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
           </div>
-          <button type="submit" id="btnSubmit" class="btn btn-primary btn-block">Submit</button>
+          <button type="submit" id="btnSubmit" class="btn btn-primary btn-block makebig">Submit</button>
         </form>
       </div>
       <div class="col"></div>
@@ -64,9 +64,9 @@
       width: 100%;
     }
 
-    .btn btn-primary btn-block
+    .makebig
     {
-
+      margin: 20px;
     }
 
   </style>

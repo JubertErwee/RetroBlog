@@ -58,18 +58,25 @@ body {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
+    margin-top: 100px; 
   }
   
   .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   
   .btn-block {
     width: 100%;
+    margin-top: 100px;
   }
-  
+  #btnSubmit{
+    margin-bottom: 30px;
+  }
+
   /* Grid system */
   .container {
     width: 100%;
@@ -94,3 +101,7 @@ body {
     padding-left: 15px;
   }
   
+  .submit-button
+  {
+   margin-bottom: 20px; 
+  }

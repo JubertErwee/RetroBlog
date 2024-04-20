@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const posts = [
-  { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
-  { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
-];
 
-const version = 2 + 1
+  
+  const posts = [
+    { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
+    { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
+    { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
+  ];
+
+  const version = 2 + 1;
 </script>
 
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <header>
       <h1>Retro blog </h1>
       <nav>
@@ -20,12 +22,12 @@ const version = 2 + 1
           <li class="nav-item">
             <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
           </li>
-          <!-- Add more navigation links here -->
+          
         </ul>
       </nav>
     </header>
 
-  </div>
+</div> -->
  <!-- the code for the card begings here -->
   
 <!-- first part ends here , -->
