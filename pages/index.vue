@@ -28,7 +28,9 @@ const version = 2 + 1
       </nav>
     </header>
   <div class="container my-3">
-
+<!-- the code for the card begings here -->
+  
+<!-- first part ends here , -->
 <div class="row overflow-x-hidden">
   <Cards
   v-for="data in cardData"
@@ -51,7 +53,6 @@ const version = 2 + 1
 </div>
 </div>
 </template>
-
 
 <style>
 .container {
@@ -127,14 +128,5 @@ p {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
-.container {
-  padding: 2px 16px;
-}
-.cardsname{
-  color: #4d9c65;
-    
-  }
-
 
 </style>
