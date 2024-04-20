@@ -1,19 +1,18 @@
-<script setup lang="ts">
+<script setup>
+import {ref} from 'vue';
+import Cards from '../components/Cards';
+const cardData = ref([
+  { id: 1, title: 'Doctor Strange', content: '"Doctor Strange in the Multiverse of Madness" explores the multiverse as Doctor Strange faces new threats and delves deeper into the mystical realms to confront dark forces.', image: '/img/blog3.jpg' },
+  { id: 2, title: 'Avengers: Endgame', content: '"Avengers: Endgame" follows Earth\'s mightiest heroes as they embark on a time-bending mission to reverse the devastating effects of Thanos\' snap and restore order to the universe.', image: '/img/blog-1.jpg' },
+  { id: 3, title: 'Black Panther', content: '"Black Panther" follows T\'Challa, the newly crowned king of Wakanda, as he grapples with his new role while confronting internal and external threats to his kingdom\'s peace and prosperity.', image: '/img/blog4.jpeg' }
+]);
 
-  
-  const posts = [
-    { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
-    { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-    { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
-  ];
-
-  const version = 2 + 1;
+const version = 2 + 1
 </script>
 
 <template>
-  <!-- <div class="container">
-    <header>
-      <h1>Retro blog </h1>
+  <header>
+      <h1>RetroBlog</h1>
       <nav>
         <ul class="nav">
           <li class="nav-item">
@@ -22,25 +21,37 @@
           <li class="nav-item">
             <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
           </li>
-          
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary"><nuxt-link to="/contact">Contact</nuxt-link></button>
+          </li>
         </ul>
       </nav>
     </header>
+  <div class="container my-3">
 
-</div> -->
- <!-- the code for the card begings here -->
-  
-<!-- first part ends here , -->
-<div class="card-container">
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
+<div class="row overflow-x-hidden">
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :image="data.image"
+  :title="data.title"
+  :content="data.content"></Cards>
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :image="data.image"
+  :title="data.title"
+  :content="data.content"></Cards>
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :image="data.image"
+  :title="data.title"
+  :content="data.content"></Cards>
+</div>
 </div>
 </template>
+
 
 <style scoped>
 .container {
@@ -79,7 +90,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
 }
-
+  
 .blog {
   padding: 20px;
 }
@@ -112,27 +123,11 @@ p {
   background-color: #555;
 }
 
-/*  the code for the card styling begins here */
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-}
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 30%; /* Set width to 30% to display three cards next to each other */
-  margin: 20px;
-}
-
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
 }
