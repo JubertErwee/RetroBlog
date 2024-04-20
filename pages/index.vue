@@ -27,6 +27,7 @@ const version = 2 + 1
 
   </div>
  <!-- the code for the card begings here -->
+  
 <!-- first part ends here , -->
 <div class="card-container">
   <cards></cards>
@@ -133,6 +134,10 @@ p {
 .container {
   padding: 2px 16px;
 }
+.cardsname{
+  color: #4d9c65;
+    
+  }
 
 
 </style>
