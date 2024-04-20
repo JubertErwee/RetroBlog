@@ -1,9 +1,12 @@
+
 <script setup lang="ts">
 const posts = [
   { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
   { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
   { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
 ];
+
+const version = 2 + 1
 </script>
 
 <template>
@@ -12,6 +15,8 @@ const posts = [
       <h1>Retro blog </h1>
       <nav>
         <ul>
+          <button type="button" class="btn btn-danger">Home</button>
+          <button type="button" class="btn btn-warning">About</button>
           <li><nuxt-link to="/" exact>Home</nuxt-link></li>
           <li><nuxt-link to="/about">About</nuxt-link></li>
           <!-- Add more navigation links here -->
