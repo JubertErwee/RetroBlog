@@ -96,6 +96,7 @@ export default {
 
 <style scoped>
 .container {
+  padding-top: 30px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
