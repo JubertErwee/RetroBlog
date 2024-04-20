@@ -15,7 +15,7 @@ const version = 2 + 1
       <nav>
         <ul class="nav">
           <li class="nav-item">
-            <button type="button" class="btn btn-danger"><nuxt-link to="/" exact>Home</nuxt-link></button>
+            <button type="button" class="btn btn-danger"><nuxt-link to="/index" exact>Home</nuxt-link></button>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
@@ -30,13 +30,13 @@ const version = 2 + 1
   
 <!-- first part ends here , -->
 <div class="card-container">
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
-  <cards></cards>
+  <Cards></Cards>
+  <Cards></Cards>
+  <Cards></Cards>
+  <Cards></Cards>
+  <Cards></Cards>
+  <Cards></Cards>
+  <Cards></Cards>
 </div>
 </template>
 
