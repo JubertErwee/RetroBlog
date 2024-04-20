@@ -28,8 +28,7 @@ const version = 2 + 1
       </nav>
     </header>
   <div class="container my-3">
-    
- <!-- the code for the card begings here -->
+<!-- the code for the card begings here -->
   
 <!-- first part ends here , -->
 <div class="row overflow-x-hidden">
@@ -55,8 +54,7 @@ const version = 2 + 1
 </div>
 </template>
 
-
-<style scoped>
+<style>
 .container {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -130,6 +128,5 @@ p {
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
 
 </style>
