@@ -10,19 +10,17 @@ const version = 2 + 1
 </script>
 
 <template>
-  <div class="container">
-    <header>
-      <h1>Retro blog </h1>
-      <nav>
-        <ul>
-          <button type="button" class="btn btn-danger">Home</button>
-          <button type="button" class="btn btn-warning">About</button>
-          <li><nuxt-link to="/" exact>Home</nuxt-link></li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
-          <!-- Add more navigation links here -->
+  <div class="d-flex justify-content-around">
+    <a href="" class="navbar-bar"><h1>RetroBlog</h1></a>
+    <nav class="navbar d-flex flex-row justify-content-around">
+        <ul class="navbar-nav">
+          <li class="nav-item"><nuxt-link to="/" exact class="nav-link">Home</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  <div class="container">
+    
     <div class="blog">
       <ul>
         <li v-for="post in posts" :key="post.id" class="post">
@@ -49,24 +47,6 @@ header {
 header h1 {
   font-size: 2.5rem;
   margin-left: 20px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
 }
 
 .blog {
