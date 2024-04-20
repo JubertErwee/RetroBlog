@@ -6,6 +6,7 @@ const version = 2 + 1
   <div class="hello">
     Hello Nuxt {{ version }}!
   </div>
+  <li><nuxt-link to="/about" class="btn">About</nuxt-link></li>
 </template>
 
 <style scoped>
