@@ -10,15 +10,23 @@ const cardimages = ref([
 const cardData = ref([
   { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
   { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
+  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' },
+  { id: 4, title: 'Fourth Post', content: 'This is the content of the fourth post.' },
+  { id: 5, title: 'Fifth Post', content: 'This is the content of the fifth post.' },
+  { id: 6, title: 'Sixth Post', content: 'This is the content of the sixth post.' },
+  { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
+  { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
+  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' },
+  { id: 4, title: 'Fourth Post', content: 'This is the content of the fourth post.' },
+  { id: 5, title: 'Fifth Post', content: 'This is the content of the fifth post.' },
+  { id: 6, title: 'Sixth Post', content: 'This is the content of the sixth post.' }
 ]);
 
 const version = 2 + 1
 </script>
 
 <template>
-  <div class="container">
-    <header>
+  <header>
       <h1>Retro blog </h1>
       <nav>
         <ul class="nav">
@@ -32,21 +40,20 @@ const version = 2 + 1
         </ul>
       </nav>
     </header>
-
-  </div>
+  <div class="container my-3">
+    
  <!-- the code for the card begings here -->
   
 <!-- first part ends here , -->
-<div class="card-container">
-  <Cards></Cards>
-  <Cards></Cards>
-  <Cards></Cards>
-  <Cards></Cards>
-  <Cards></Cards>
-  <Cards></Cards>
-  <Cards></Cards>
+<div class="row overflow-x-hidden">
+  <Cards
+  v-for="data in cardData"
+  :key="data.id"
+  :title="data.title"
+  :content="data.content"></Cards>
 </div>
 </template>
+
 
 <style scoped>
 .container {
@@ -85,7 +92,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
 }
-
+  
 .blog {
   padding: 20px;
 }
@@ -118,34 +125,10 @@ p {
   background-color: #555;
 }
 
-/*  the code for the card styling begins here */
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-}
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 30%; /* Set width to 30% to display three cards next to each other */
-  margin: 20px;
-}
-
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-.cardsname{
-  color: #4d9c65;
-    
-  }
 
 
 </style>
