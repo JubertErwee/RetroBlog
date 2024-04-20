@@ -26,6 +26,25 @@
       <div class="col"></div>
     </div>
   </div>
+
+  <footer class="footer bg-dark text-light py-4">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Location</h5>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Call</h5>
+          <p><i class="fas fa-phone"></i> +1234567890</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Email</h5>
+          <p><i class="fas fa-envelope"></i> contact@example.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -51,6 +70,7 @@ export default {
 
         // Redirect back to '/'
         // You can replace this with your actual redirection logic
+        window.alert("Message was submitted succesfully!");
         window.location.href = '/';
       }
     }
@@ -67,19 +87,27 @@ export default {
   margin-left: auto;
 }
 
+.btn.btn-primary.btn-block.makebig
+{
+    color: #fff;
+    background-color: rgb(36, 228, 36);
+    border-color: rgb(131, 243, 131);
+    width:250px;
+    height:50px
+}
+
 .form-group {
   margin-bottom: 20px;
 }
 
-    .form-group label {
-      text-align: left; 
-      display: block;
-      width: 100%;
-    }
+.form-group label {
+  text-align: left; 
+  display: block;
+  width: 100%;
+}
 
-    .makebig
-    {
-      margin: 20px;
-    }
-
-  </style>
+.makebig
+{
+  margin: 20px;
+}
+</style>
