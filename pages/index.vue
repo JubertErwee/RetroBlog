@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from 'vue';
-import Cards from '../components/Cards.vue';
+import Cards from '../components/Cards';
 const cardimages = ref([
   { content: 'This is the content of the first post.' },
   { content: 'This is the content of the second post.' },
@@ -21,6 +21,8 @@ const cardData = ref([
   { id: 5, title: 'Fifth Post', content: 'This is the content of the fifth post.' },
   { id: 6, title: 'Sixth Post', content: 'This is the content of the sixth post.' }
 ]);
+
+const version = 2 + 1
 </script>
 
 <template>
@@ -29,7 +31,7 @@ const cardData = ref([
       <nav>
         <ul class="nav">
           <li class="nav-item">
-            <button type="button" class="btn btn-danger"><nuxt-link to="/" exact>Home</nuxt-link></button>
+            <button type="button" class="btn btn-danger"><nuxt-link to="/index" exact>Home</nuxt-link></button>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-warning"><nuxt-link to="/about">About</nuxt-link></button>
@@ -50,9 +52,8 @@ const cardData = ref([
   :title="data.title"
   :content="data.content"></Cards>
 </div>
-
-</div>
 </template>
+
 
 <style scoped>
 .container {
