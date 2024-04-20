@@ -13,21 +13,21 @@ const version = 2 + 1
     <div class="card">
     <img alt="Avatar" style="width:100%">
     <div class="container">
-      <h4><b>John Doe</b></h4>
+      <h4><b class="cardsname">John Doe</b></h4>
+      <p class="cardsname">Architect & Engineer</p>
+    </div>
+  </div>
+  <div class="card">
+    <img alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b class="cardsname">John Doe</b></h4>
       <p>Architect & Engineer</p>
     </div>
   </div>
   <div class="card">
     <img alt="Avatar" style="width:100%">
     <div class="container">
-      <h4><b>John Doe</b></h4>
-      <p>Architect & Engineer</p>
-    </div>
-  </div>
-  <div class="card">
-    <img alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>John Doe</b></h4>
+      <h4><b class="cardsname">John Doe</b></h4>
       <p>Architect & Engineer</p>
     </div>
   </div>
@@ -38,47 +38,7 @@ const version = 2 + 1
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
   }
-  
-  header {
-    background-color: #333;
-    color: #4d9c65;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-left: 20px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin-right: 10px;
-  }
-  
-  .nav-item:last-child {
-    margin-right: 0;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .blog {
-    padding: 20px;
-  }
-  
-  .post {
-    margin-bottom: 20px;
-  }
-  
+
   h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -116,6 +76,7 @@ const version = 2 + 1
     transition: 0.3s;
     width: 30%; /* Set width to 30% to display three cards next to each other */
     margin: 20px;
+    background-color: #c2c7c4;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -127,7 +88,9 @@ const version = 2 + 1
   .container {
     padding: 2px 16px;
   }
-  
+  .cardsname{
+    color: #4d9c65;
+  }
   
   </style>
   
