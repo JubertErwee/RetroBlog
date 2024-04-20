@@ -1,9 +1,17 @@
-<script setup lang="ts">
-const posts = [
+<script setup>
+import {ref} from 'vue';
+import Cards from '../components/Cards';
+const cardimages = ref([
+  { content: 'This is the content of the first post.' },
+  { content: 'This is the content of the second post.' },
+  { content: 'This is the content of the third post.' }
+]);
+
+const cardData = ref([
   { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
   { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
   { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
-];
+]);
 
 const version = 2 + 1
 </script>

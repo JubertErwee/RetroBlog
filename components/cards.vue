@@ -27,17 +27,13 @@ const version = 2 + 1
       <h4><b class="cardsname">Avengers </b></h4>
       <p class="pdiscript">Architect & Engineer</p>
     </div>
-  </div>
   <div class="card">
     <img src="..\components\assets\blog4.jpeg" alt="Avatar" style="width:100%">
     <div class="container">
       <h4><b class="pdiscript">Black Panther</b></h4>
       <p>Architect & Engineer</p>
     </div>
-  </div>
- 
 </div>
-  </template>
   <style scoped>
   .container {
     font-family: Arial, Helvetica, sans-serif;
