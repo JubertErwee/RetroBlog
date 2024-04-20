@@ -1,8 +1,11 @@
-<script setup lang="ts">
-const posts = [
+<script setup lang="js">
+const data = [
   { id: 1, title: 'First Post', content: 'This is the content of the first post.' },
   { id: 2, title: 'Second Post', content: 'This is the content of the second post.' },
-  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' }
+  { id: 3, title: 'Third Post', content: 'This is the content of the third post.' },
+  { id: 4, title: 'First Post', content: 'This is the content of the first post.' },
+  { id: 5, title: 'Second Post', content: 'This is the content of the second post.' },
+  { id: 6, title: 'Third Post', content: 'This is the content of the third post.' }
 ];
 
 const version = 2 + 1
@@ -13,8 +16,8 @@ const version = 2 + 1
     <div class="card">
     <img alt="Avatar" style="width:100%">
     <div class="container">
-      <h4><b class="cardsname">John Doe</b></h4>
-      <p class="cardsname">Architect & Engineer</p>
+      <h4>{{ data[0].title }}</h4>
+      <p>{{ data[0].content}}</p>
     </div>
   </div>
   <div class="card">
